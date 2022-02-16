@@ -47,26 +47,5 @@ public class Cat implements Participant {
         return name;
     }
 
-
-    public boolean doAction(Wall wall) {
-        return jump(wall);
-    }
-
-    public boolean doAction(RunningTrack track) {
-        return run(track);
-    }
-
-    @Override
-    public boolean doAction(Hurdle hurdle) {
-        if (hurdle instanceof Wall) {
-            return jump ((Wall) hurdle);
-        } else {
-            if (hurdle instanceof RunningTrack) {
-                return run ((RunningTrack) hurdle);
-            } else {
-                return false;
-            }
-        }
-    }
 }
 

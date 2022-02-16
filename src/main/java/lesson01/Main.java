@@ -35,7 +35,7 @@ public class Main {
             faultIndex = 1;
             for (int j = 0; j < hurdles.length; j++) {
                 Thread.sleep(600);
-                success = participants[i].doAction(hurdles[j]);
+                success = hurdles[j].overcomeByParticipant(participants[i]);
                 if (!success) {
                     faultIndex = j+1;
                     break;

@@ -17,4 +17,9 @@ public class RunningTrack implements Hurdle {
                 "length=" + length +
                 '}';
     }
+
+    @Override
+    public boolean overcomeByParticipant(Participant participant) {
+        return participant.run(this);
+    }
 }

@@ -17,4 +17,9 @@ public class Wall implements Hurdle {
                 "height=" + height +
                 '}';
     }
+
+    @Override
+    public boolean overcomeByParticipant(Participant participant) {
+        return participant.jump(this);
+    }
 }

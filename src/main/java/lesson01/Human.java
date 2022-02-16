@@ -47,16 +47,4 @@ public class Human implements Participant {
         return name;
     }
 
-    @Override
-    public boolean doAction(Hurdle hurdle) {
-        if (hurdle instanceof Wall) {
-            return jump ((Wall) hurdle);
-        } else {
-            if (hurdle instanceof RunningTrack) {
-                return run ((RunningTrack) hurdle);
-            } else {
-                return false;
-            }
-        }
-    }
 }
